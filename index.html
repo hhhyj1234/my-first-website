@@ -5,20 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>진도표</title>
-    <nav>
-      <h1><a href="index.html" style="text-decoration: none">진도표</a></h1>
-      <ol>
-        <li><a href="1.html" style="text-decoration: none">들어보자</a></li>
-        <li><a href="2.html" style="text-decoration: none">수강완료</a></li>
-        <li><a href="3.html" style="text-decoration: none">하면 좋지</a></li>
-      </ol>
-    </nav>
+    <style>
+      body {
+        margin: 0;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      #active {
+        color: red;
+      }
+      h1 {
+        font-size: 40px;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        margin: 0;
+        padding: 20px;
+      }
+      ol {
+        border-right: 1px solid gray;
+        width: 100px;
+        margin: 0;
+        padding: 20px 0 0 40px;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #grid ol {
+        padding-left: 40px;
+      }
+      #article {
+        padding: 20px 0 20px 20px;
+      }
+      @media (max-width: 600px) {
+        ol {
+          border-right: none;
+        }
+        #grid {
+          display: block;
+        }
+        h1 {
+          border-bottom: none;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <h3 style="margin-top: 40px">한 번 듣고 힘차게 가보자고~!</h3>
-    <video controls width="80%">
-      <source src="mozaCool.mp4" ype="video/mp4" />
-    </video>
+    <h1><a href="index.html">진도표</a></h1>
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">들어보자</a></li>
+        <li><a href="2.html">수강완료</a></li>
+        <li><a href="3.html">하면 좋지</a></li>
+      </ol>
+      <div id="article">
+        <h3 style="margin-top: 40px">한 번 듣고 힘차게 가보자고~!</h3>
+        <video controls width="80%">
+          <source src="mozaCool.mp4" ype="video/mp4" />
+        </video>
+      </div>
+    </div>
   </body>
 </html>

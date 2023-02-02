@@ -1,46 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      body {
+        margin: 0;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      #active {
+        color: red;
+      }
+      h1 {
+        font-size: 40px;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        margin: 0;
+        padding: 20px;
+      }
+      ol {
+        border-right: 1px solid gray;
+        width: 100px;
+        margin: 0;
+        padding: 20px 0 0 40px;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #grid ol {
+        padding-left: 40px;
+      }
+      #article {
+        padding: 20px 0 20px 20px;
+      }
+      @media (max-width: 600px) {
+        ol {
+          border-right: none;
+        }
+        #grid {
+          display: block;
+        }
+        h1 {
+          border-bottom: none;
+        }
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>진도표</title>
-    <nav>
-      <h1><a href="index.html" style="text-decoration: none">진도표</a></h1>
-      <ol>
-        <li><a href="1.html" style="text-decoration: none">들어보자</a></li>
-        <li><a href="2.html" style="text-decoration: none">수강완료</a></li>
-        <li><a href="3.html" style="text-decoration: none">하면 좋지</a></li>
-      </ol>
-    </nav>
   </head>
   <body>
-    <section>
-      <label style="display: block">
-        <input type="checkbox" name="subject" value="WEB1" checked />
-        WEB1 - HTML&Internet / 2월 1일 - 2월 1일
-      </label>
-      <label style="display: block">
-        <input type="checkbox" name="subject" value="WEB2" /> WEB2 - CSS
-      </label>
-      <label style="display: block">
-        <input type="checkbox" name="subject" value="WEB2" /> WEB2 - JavaScript
-      </label>
-      <label style="display: block">
-        <input type="checkbox" name="subject" value="WEB2" /> WEB2 - Node.js
-      </label>
-      <label style="display: block">
-        <input type="checkbox" name="subject" value="DATABASE" /> DATABASE1
-      </label>
-      <label style="display: block">
-        <input type="checkbox" name="subject" value="DATABASE" /> MySQL
-      </label>
-      <label style="display: block">
-        <input type="checkbox" name="subject" value="DATABASE" /> Oracle
-      </label>
-      <label style="display: block">
-        <input type="checkbox" name="subject" value="Language" /> WEB2 - CSS
-      </label>
-    </section>
+    <h1><a href="index.html">진도표</a></h1>
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">들어보자</a></li>
+        <li><a href="2.html" id="active">수강완료</a></li>
+        <li><a href="3.html">하면 좋지</a></li>
+      </ol>
+      <div id="article">
+        <label style="display: block">
+          <input type="checkbox" name="subject" value="WEB1" checked />
+          WEB1 - HTML&Internet / 2월 1일 - 2월 1일
+        </label>
+        <label style="display: block"> <input type="checkbox" name="subject" value="WEB2" /> WEB2 - CSS </label>
+        <label style="display: block"> <input type="checkbox" name="subject" value="WEB2" /> WEB2 - JavaScript </label>
+        <label style="display: block"> <input type="checkbox" name="subject" value="WEB2" /> WEB2 - Node.js </label>
+        <label style="display: block"> <input type="checkbox" name="subject" value="DATABASE" /> DATABASE1 </label>
+        <label style="display: block"> <input type="checkbox" name="subject" value="DATABASE" /> MySQL </label>
+        <label style="display: block"> <input type="checkbox" name="subject" value="DATABASE" /> Oracle </label>
+        <label style="display: block"> <input type="checkbox" name="subject" value="Language" /> WEB2 - CSS </label>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, distinctio atque sapiente, voluptatem itaque repellendus nam voluptatibus cumque enim, pariatur alias sunt sed eveniet error
+          aspernatur dolorem impedit amet facilis?
+        </p>
+      </div>
+    </div>
   </body>
 </html>
