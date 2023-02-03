@@ -3,12 +3,18 @@
   <head>
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>진도표</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="colors.js"></script>
   </head>
   <body>
     <h1><a href="index.html">진도표</a></h1>
+    <input
+      type="button"
+      value="night"
+      onclick="
+      nightDayHandler(this);"
+    />
     <div id="grid">
       <ol>
         <li><a href="1.html">들어보자</a></li>
@@ -20,13 +26,29 @@
           <input type="checkbox" name="subject" value="WEB1" checked />
           WEB1 - HTML&Internet / 2월 1일 - 2월 1일
         </label>
-        <label style="display: block"> <input type="checkbox" name="subject" value="WEB2" checked /> WEB2 - CSS / 2월 2일 - 2월 2일</label>
-        <label style="display: block"> <input type="checkbox" name="subject" value="WEB2" /> WEB2 - JavaScript </label>
-        <label style="display: block"> <input type="checkbox" name="subject" value="WEB2" /> WEB2 - Node.js </label>
-        <label style="display: block"> <input type="checkbox" name="subject" value="DATABASE" /> DATABASE1 </label>
-        <label style="display: block"> <input type="checkbox" name="subject" value="DATABASE" /> MySQL </label>
-        <label style="display: block"> <input type="checkbox" name="subject" value="DATABASE" /> Oracle </label>
-        <label style="display: block"> <input type="checkbox" name="subject" value="Language" /> WEB2 - CSS </label>
+        <label style="display: block">
+          <input type="checkbox" name="subject" value="WEB2" checked /> WEB2 -
+          CSS / 2월 2일 - 2월 2일</label
+        >
+        <label style="display: block">
+          <input type="checkbox" name="subject" value="WEB2" /> WEB2 -
+          JavaScript
+        </label>
+        <label style="display: block">
+          <input type="checkbox" name="subject" value="WEB2" /> WEB2 - Node.js
+        </label>
+        <label style="display: block">
+          <input type="checkbox" name="subject" value="DATABASE" /> DATABASE1
+        </label>
+        <label style="display: block">
+          <input type="checkbox" name="subject" value="DATABASE" /> MySQL
+        </label>
+        <label style="display: block">
+          <input type="checkbox" name="subject" value="DATABASE" /> Oracle
+        </label>
+        <label style="display: block">
+          <input type="checkbox" name="subject" value="Language" /> WEB2 - CSS
+        </label>
       </div>
     </div>
   </body>

@@ -4,72 +4,16 @@
     <meta charset="UTF-8" />
     <title>진도표</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="colors.js"></script>
   </head>
   <body>
     <h1><a href="index.html">진도표</a></h1>
-    <!-- <input
-      type="button"
-      value="night"
-      onclick="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
-    "
-    />
-    <input
-      type="button"
-      value="day"
-      onclick="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
-    "
-    /> -->
-
-    <!-- <input
-      id="night_day"
-      type="button"
-      value="night"
-      onclick="
-        if(document.querySelector('#night_day').value === 'night') {
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-        document.querySelector('#night_day').value = 'day';
-        } else {
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        document.querySelector('#night_day').value = 'night';
-        }
-      "
-    /> -->
-
     <input
       type="button"
       value="night"
       onclick="
-      const target = document.querySelector('body');
-      if(this.value === 'night') {
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        this.value = 'day';
-        
-        const alist = document.querySelectorAll('a');
-        let i = 0;
-        while(i<alist.length){
-        alist[i].style.color = 'powderblue';
-        i++;
-        }
-        
-      } else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        this.value = 'night';
-        const alist = document.querySelectorAll('a');
-        let i = 0;
-        while(i<alist.length){
-        alist[i].style.color = 'black';
-        i++;
-        }
-      }
-      "
+      nightDayHandler(this);"
     />
     <div id="grid">
       <ol>
@@ -78,7 +22,9 @@
         <li><a href="3.html">일기?</a></li>
       </ol>
       <div id="article">
-        <img src="kang.GIF" alt="vamos" width="70%" />
+        <p style="text-align: center">
+          <img src="kang.GIF" alt="vamos" width="50%" />
+        </p>
         <details>
           <summary>Review</summary>
           <details>
@@ -92,35 +38,5 @@
         </details>
       </div>
     </div>
-    <input
-      type="button"
-      value="night"
-      onclick="
-      if(this.value === 'night') {
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-        this.value = 'day';
-      } else {
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        this.value = 'night';
-      }
-      "
-    />
-    <input
-      type="button"
-      value="night"
-      onclick="
-      if(this.value === 'night') {
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-        this.value = 'day';
-      } else {
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        this.value = 'night';
-      }
-      "
-    />
   </body>
 </html>
