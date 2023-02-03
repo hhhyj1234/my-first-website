@@ -40,6 +40,7 @@
         }
       "
     /> -->
+
     <input
       type="button"
       value="night"
@@ -49,10 +50,24 @@
         target.style.backgroundColor = 'black';
         target.style.color = 'white';
         this.value = 'day';
+        
+        const alist = document.querySelectorAll('a');
+        let i = 0;
+        while(i<alist.length){
+        alist[i].style.color = 'powderblue';
+        i++;
+        }
+        
       } else {
         target.style.backgroundColor = 'white';
         target.style.color = 'black';
         this.value = 'night';
+        const alist = document.querySelectorAll('a');
+        let i = 0;
+        while(i<alist.length){
+        alist[i].style.color = 'black';
+        i++;
+        }
       }
       "
     />
@@ -69,7 +84,8 @@
           <details>
             <summary>2/2</summary>
             <p>
-              클라이언트의 html과 css를 먼저 듣고 web2 js로 넘어갈까?<br />상단부 진도표와 링크 걸어둔 메뉴바를 고정시키고싶다.<br />
+              클라이언트의 html과 css를 먼저 듣고 web2 js로 넘어갈까?<br />상단부
+              진도표와 링크 걸어둔 메뉴바를 고정시키고싶다.<br />
               html파일 바뀔 때마다 붙여넣기 하는 건 너무 비효율적이니까
             </p>
           </details>
