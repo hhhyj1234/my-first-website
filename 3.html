@@ -2,13 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>진도표</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1><a href="index.html">진도표</a></h1>
+    <!-- <input
+      type="button"
+      value="night"
+      onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    "
+    />
+    <input
+      type="button"
+      value="day"
+      onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    "
+    /> -->
+
+    <!-- <input
+      id="night_day"
+      type="button"
+      value="night"
+      onclick="
+        if(document.querySelector('#night_day').value === 'night') {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#night_day').value = 'day';
+        } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#night_day').value = 'night';
+        }
+      "
+    /> -->
+    <input
+      type="button"
+      value="night"
+      onclick="
+      const target = document.querySelector('body');
+      if(this.value === 'night') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+      }
+      "
+    />
     <div id="grid">
       <ol>
         <li><a href="1.html">들어보자</a></li>
@@ -19,15 +66,45 @@
         <img src="kang.GIF" alt="vamos" width="70%" />
         <details>
           <summary>Review</summary>
-          <div>
-            <h3>2/2</h3>
+          <details>
+            <summary>2/2</summary>
             <p>
               클라이언트의 html과 css를 먼저 듣고 web2 js로 넘어갈까?<br />상단부 진도표와 링크 걸어둔 메뉴바를 고정시키고싶다.<br />
-              html파일 바뀔 때마다 붙여넣기 하는 건 너무 비효율적이잔아
+              html파일 바뀔 때마다 붙여넣기 하는 건 너무 비효율적이니까
             </p>
-          </div>
+          </details>
         </details>
       </div>
     </div>
+    <input
+      type="button"
+      value="night"
+      onclick="
+      if(this.value === 'night') {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        this.value = 'day';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        this.value = 'night';
+      }
+      "
+    />
+    <input
+      type="button"
+      value="night"
+      onclick="
+      if(this.value === 'night') {
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        this.value = 'day';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        this.value = 'night';
+      }
+      "
+    />
   </body>
 </html>
